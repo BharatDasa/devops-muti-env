@@ -1,18 +1,24 @@
 image:
   repository: bharatdasa/hello-world
   tag: latest
+
 replicaCount: 2
+
 service:
   port: 80
+
 ingress:
   enabled: true
-  host: ""   # overridden per env
+  host: ""
   tls:
     enabled: true
     secretName: wildcard-tls
+
 resources: {}
-  serviceAccount:
+
+serviceAccount:
   create: false
   name: hello-app-sa
+
 rbac:
   create: false

@@ -30,6 +30,12 @@
     <id>nexus</id>
     <url>http://192.168.56.11:8081/repository/maven-snapshots/</url>
   </snapshotRepository>
+
+  <site>
+    <id>site-server</id>
+    <name>Test Project Site</name>
+    <url>file:///tmp/maven-project-site</url>
+  </site>
 </distributionManagement>
 
          

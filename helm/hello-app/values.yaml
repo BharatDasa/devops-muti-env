@@ -9,16 +9,9 @@ service:
 
 ingress:
   enabled: true
-  host: ""
+  host: ""   # overridden per env
   tls:
     enabled: true
     secretName: wildcard-tls
 
 resources: {}
-
-serviceAccount:
-  create: false
-  name: hello-app-sa
-
-rbac:
-  create: false

@@ -22,7 +22,7 @@ spec:
         app: hello-app
 
     spec:
-      serviceAccountName: {{ .Values.serviceAccount.name }}
+      serviceAccountName: hello-app-sa
       automountServiceAccountToken: false
 
       containers:

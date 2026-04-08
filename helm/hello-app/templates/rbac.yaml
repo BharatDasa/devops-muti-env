@@ -1,12 +1,8 @@
-{{- if .Values.rbac.create }}
-
-{{- if .Values.serviceAccount.create }}
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ .Values.serviceAccount.name }}
+  name: hello-app-sa
   namespace: {{ .Release.Namespace }}
-{{- end }}
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -24,11 +20,8 @@ metadata:
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
-  name: {{ .Values.serviceAccount.name }}
-  namespace: {{ .Release.Namespace }}
+  name: hello-app-sa
 roleRef:
   kind: Role
   name: hello-app-role
   apiGroup: rbac.authorization.k8s.io
-
-{{- end }}

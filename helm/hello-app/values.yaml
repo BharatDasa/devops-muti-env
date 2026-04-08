@@ -16,3 +16,7 @@ ingress:
 
 resources: {}
 
+# 🔥 ADD THIS (VERY IMPORT
+serviceAccount:
+  create: false
+  name: hello-app-sa

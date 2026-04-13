@@ -9,9 +9,25 @@ service:
 
 ingress:
   enabled: true
-  host: ""   # overridden per env
+  host: ""
   tls:
     enabled: true
     secretName: wildcard-tls
 
-resources: {}
+resources:
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+# 🔥 NEW
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 6
+  cpu: 70
+
+monitoring:
+  enabled: true

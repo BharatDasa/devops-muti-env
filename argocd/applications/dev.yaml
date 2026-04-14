@@ -6,6 +6,7 @@ metadata:
 
 spec:
   project: default
+  revisionHistoryLimit: 5
 
   source:
     repoURL: git@github.com:BharatDasa/devops-muti-env.git
@@ -23,7 +24,12 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    retry:
+      limit: 3
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 1m
     syncOptions:
       - CreateNamespace=true
-
       

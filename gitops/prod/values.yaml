@@ -1,6 +1,6 @@
 image:
   repository: bharatdasa/hello-world
-  tag: 11
+  tag: 12
 
 replicaCount: 3
 

@@ -5,6 +5,9 @@ ingress:
   host: hello.192.168.56.100.nip.io
 
 resources:
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
   limits:
     cpu: "500m"
     memory: "512Mi"

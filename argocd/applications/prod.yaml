@@ -13,7 +13,7 @@ spec:
     path: helm/hello-app
     helm:
       valueFiles:
-        - ../../gitops/prod/values.yaml
+        - gitops/prod/values.yaml
 
   destination:
     server: https://kubernetes.default.svc
